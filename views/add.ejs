@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Battambang";
+        }
+        .box{
+            width: 50%;
+            height: 600px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box my-4 mx-auto px-5">
+        <h3 class="text-center my-3">FORM ADD BLOG</h3>
+        <form action="/createNewBlog" method="post">
+            <div class="form-group my-4">
+                <label for="title">Title : </label>
+                <input type="text" name="title" id="title" class="form-control mt-4 border border-2 border-dark">
+            </div>
+            <div class="form-group my-4">
+                <label for="description">Description : </label>
+                <textarea name="description" id="description" class="form-control mt-4 border border-2 border-dark"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="status">Status : </label>
+                <select name="status" id="status" class="form-select border border-2 border-dark">
+                    <option value="available">Available</option>
+                    <option value="unavailable">Unavailable</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success mt-5">Submit</button>
+            <button class="btn btn-danger mt-5">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>
