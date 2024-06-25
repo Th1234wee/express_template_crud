@@ -30,8 +30,8 @@
                 <div class="card border border-4 mt-2 p-3" style="width: 48%; height:50%;">
                     <h4><%= blog.title %></h4>
                     <p><%= blog.description %></p>
-                    <form action="" method="post">
-                        <button class="btn btn-warning">UPDATE</button>
+                    <form action="/pageUpdate/<%= blog.id %>">
+                        <button type="submit" class="btn btn-warning">UPDATE</button>
                     </form>
                     <br>
                     <form action="" method="post">

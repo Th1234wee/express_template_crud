@@ -24,15 +24,15 @@
 </head>
 <body>
     <div class="box my-4 mx-auto px-5">
-        <h3 class="text-center my-3">FORM ADD BLOG</h3>
+        <h3 class="text-center my-3">FORM EDIT BLOG</h3>
         <form action="/createNewBlog" method="post">
             <div class="form-group my-4">
                 <label for="title">Title : </label>
-                <input type="text"  name="title" id="title" class="form-control mt-4 border border-2 border-dark">
+                <input type="text" value="<%= foundBlog.title %>" name="title" id="title" class="form-control mt-4 border border-2 border-dark">
             </div>
             <div class="form-group my-4">
                 <label for="description">Description : </label>
-                <textarea name="description"  id="description" class="form-control mt-4 border border-2 border-dark"></textarea>
+                <textarea name="description" value="" id="description" class="form-control mt-4 border border-2 border-dark"><%= foundBlog.description %></textarea>
             </div>
             <div class="form-group">
                 <label for="status">Status : </label>

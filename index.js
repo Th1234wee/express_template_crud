@@ -20,6 +20,18 @@ app.get('/' , (request,response) => {
 app.get('/addBlog',(request,response)=>{
     response.render('add.ejs');
 })
+app.get('/pageUpdate/:id' , (request,response) => {
+    const id = request.params.id;
+    const foundBlog = blog.find(blog => blog.id == id);
+
+
+    response.render('edit.ejs',
+        {
+            foundBlog : foundBlog
+        }
+    );
+    
+})
 app.use("",blogRoute);
 
 app.listen(port , (request , response) => {
