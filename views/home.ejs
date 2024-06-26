@@ -18,12 +18,12 @@
     </style>
 </head>
 <body>
-    <div class="container border border-4 border-warning mt-3 " style="height: 100vh;">
+    <div class="container border border-4 border-warning mt-3 " style="height: 1200px   ;">
         <h2 class="text-center mt-4 ">Blog Website</h2>
         <button class="btn btn-warning m-3">REFRESH</button>
-        <a href="/addBlog">
+        <form action="/addBlog" method="GET">
             <button class="btn btn-primary m-3">ADD NEW</button>
-        </a>
+        </form>
 
         <div class="container h-75 d-flex justify-content-between flex-wrap">
             <% blog.forEach(blog => { %>
@@ -34,8 +34,8 @@
                         <button type="submit" class="btn btn-warning">UPDATE</button>
                     </form>
                     <br>
-                    <form action="" method="post">
-                        <button  class="btn btn-danger">DELETE</button>
+                    <form action="/removeBlog/<%= blog.id %>" method="post">
+                        <button class="btn btn-danger">DELETE</button>
                     </form>
                 </div>
             <% }) %>   

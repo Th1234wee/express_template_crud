@@ -47,6 +47,7 @@ blogRoute.post('/removeBlog/:id',(request,response) => {
 
     if(foundBlogIndex != -1){
         blog.splice(foundBlogIndex,1);
+        response.redirect('/');
     }else{
         response.json({
             "message" : "Blog Not Found"
